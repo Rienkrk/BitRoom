@@ -1,0 +1,15 @@
+{{ define "base"}}
+
+  <!DOCTYPE html>
+  <html lang="nl">
+    <head>
+      <meta charset="utf-8">
+      <title>{{ template "title" .}}</title>
+      <link rel="stylesheet" href="/static/styles/index.css">
+    </head>
+      {{ template "content" .}}
+    <body>
+    </body>
+  </html>
+
+{{ end }}
