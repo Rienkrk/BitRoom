@@ -1,0 +1,110 @@
+@mixin media($width) {
+  @media only screen and ( max-width: $width ) { @content; }
+}
+
+@mixin flex($flex-direction: row, $flex-wrap: nowrap, $justify-content: flex-start, $align-items: flex-start, $align-content: flex-start) {
+  display: -webkit-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -moz-flex;
+  display: -moz-box;
+  display: flex;
+
+  -webkit-flex-direction: $flex-direction;
+      -ms-flex-direction: $flex-direction;
+          flex-direction: $flex-direction;
+
+  -webkit-flex-wrap: $flex-wrap;
+      -ms-flex-wrap: $flex-wrap;
+          flex-wrap: $flex-wrap;
+
+  -webkit-justify-content: $justify-content;
+         justify-content: $justify-content;
+
+  -webkit-align-items: $align-items;
+          align-items: $align-items;
+
+  -webkit-align-content: $align-content;
+          align-content: $align-content;
+
+
+}
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+       -o-border-radius: $radius;
+          border-radius: $radius;
+}
+
+@mixin center($block: true) {
+
+  @if $block == true {
+    display: block;
+  }
+
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@mixin container($width, $height: $width) {
+  width: $width;
+  height: $height;
+}
+
+@mixin cirkel() {
+  -webkit-border-radius: 100%;
+     -moz-border-radius: 100%;
+      -ms-border-radius: 100%;
+       -o-border-radius: 100%;
+          border-radius: 100%;
+}
+
+@mixin transition($kind: all, $time: 1s, $sort: ease, $delay: 0s) {
+  -webkit-transition:$kind $time $sort $delay !important;
+     -moz-transition:$kind $time $sort $delay !important;
+       -o-transition:$kind $time $sort $delay !important;
+          transition:$kind $time $sort $delay !important;
+}
+
+@mixin transform($transform) {
+	   -moz-transform: $transform;
+	     -o-transform: $transform;
+	    -ms-transform: $transform;
+	-webkit-transform: $transform;
+          transform: $transform;
+}
+
+@mixin rotate($deg) {
+  @include transform(rotate(#{$deg}deg));
+}
+
+@mixin scale($scale) {
+	 @include transform(scale($scale));
+}
+
+@mixin translate ($x, $y) {
+   @include transform(translate($x, $y));
+}
+
+@mixin skew ($x, $y) {
+   @include transform(skew(#{$x}deg, #{$y}deg));
+}
+
+@mixin background-image($imgpath, $size: cover, $position:0 0, $repeat: no-repeat) {
+    background: {
+        image: url($imgpath);
+        size: $size;
+        position: $position;
+        repeat: $repeat;
+    }
+}
+
+@mixin transform-origin ($origin) {
+  -webkit-transform-origin: $origin;
+      moz-transform-origin: $origin;
+      -ms-transform-origin: $origin;
+	     -o-transform-origin: $origin;
+          transform-origin: $origin;
+}

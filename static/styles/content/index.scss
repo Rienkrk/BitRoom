@@ -1,0 +1,23 @@
+@import 'Modules/base.scss';
+
+.content {
+  text-align: center;
+
+  h4 {
+    margin-top: 40px;
+    text-align: left;
+    color: white;
+  }
+
+  h1 {
+    color: white;
+  }
+
+}
+
+body {
+  background-image: linear-gradient(to top, rgba(73, 73, 73, 0.7), rgba(73, 73, 73, 0.8)), url('../../images/students.jpg');
+  background-size: auto, cover;
+  background-attachment: fixed, fixed;
+  background-position: bottom, bottom;
+}
