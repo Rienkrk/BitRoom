@@ -1,0 +1,63 @@
+@import 'Modules/base.scss';
+@import 'Modules/header.scss';
+
+.room {
+  @include flex;
+  margin-top: 50px;
+
+  input[type="text"] {
+    width: calc(100% - 16px) !important;
+    max-width: 100% !important;
+    padding: 8px !important;
+  }
+
+  .make {
+    width: calc(50% - 161px);
+    padding: 80px;
+  }
+  .sep-line {
+    width: 2px;
+    height: 200px;
+    margin-top: 80px;
+    background: #eee;
+  }
+  .join {
+    width: calc(50% - 161px);
+    padding: 80px;
+  }
+
+  @include media(1100px) {
+    .make {
+      padding: 7%;
+      width: calc(43% - 1px);
+    }
+
+    .join {
+      padding: 7%;
+      width: calc(43% - 1px);
+    }
+  }
+
+  @include media(700px) {
+    @include flex($flex-direction: column);
+
+    .sep-line {
+      height: 2px;
+      width: 90%;
+      @include center;
+      margin-top: 0px;
+      margin: 30px auto;
+    }
+
+    .make {
+      padding: 7%;
+      width: 86%;
+    }
+
+    .join {
+      padding: 7%;
+      width: 86%;
+    }
+  }
+
+}

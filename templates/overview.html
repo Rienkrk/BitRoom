@@ -4,117 +4,284 @@
     <meta charset="utf-8">
     <title>Welkom</title>
     <link rel="stylesheet" href="/static/styles/source/overview.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="/static/js/actions.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700" rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   </head>
   <body>
+
+    {{template "header"}}
+
     <div class="wrapper">
 
-        <section class="header">
-          <div class="user">
-            <img src="/static/images/person.jpg" alt="Person">
-            <span>Rienk Koenders</span>
+      <section class="members">
+
+        <span>Deelnemers</span>
+
+          <div class="member-wrapper">
+
+            <div class="member">
+              <img src="/static/images/person.jpg" alt="Person">
+              <span>Fabian Geuzen</span>
+            </div>
+            <div class="member">
+              <img src="/static/images/person.jpg" alt="Person">
+              <span>Johan Vorv</span>
+            </div>
+            <div class="member">
+              <img src="/static/images/person.jpg" alt="Person">
+              <span>Maarten Raap</span>
+            </div>
+            <div class="member">
+              <img src="/static/images/person.jpg" alt="Person">
+              <span>Laurens Gentenaar</span>
+            </div>
+
           </div>
 
-          <span>Studentenhuis 14A</span>
-        </section>
+      </section>
 
-        <section class="members">
+      <section class="payments">
 
-          <span>Deelnemers</span>
+        <div class="head">
+          <span class="details">Details</span>
+          <span class="description">Beschrijving</span>
+          <span class="cost">Kosten</span>
+        </div>
 
-            <div class="member-wrapper">
+        <div class="entries">
+
+          <div class="entry-wrapper">
+
+            <div class="entry">
 
               <div class="member">
                 <img src="/static/images/person.jpg" alt="Person">
-                <span>Fabian Geuzen</span>
+                <div class="information">
+                  <span class="name">Fabian Geuzen</span>
+                  <span class="date">23-12-2018</span>
+                </div>
               </div>
+              <span class="title">
+                Boodschappen voor burrito's
+              </span>
+              <span class="amount">
+                &euro; 45,-
+              </span>
+
+            </div>
+
+            <span class="pass">
+              Boodschappen voor burrito's
+            </span>
+
+          </div>
+          <div class="entry-wrapper dark">
+
+            <div class="entry">
+
               <div class="member">
                 <img src="/static/images/person.jpg" alt="Person">
-                <span>Johan Vorv</span>
+                <div class="information">
+                  <span class="name">Fabian Geuzen</span>
+                  <span class="date">23-12-2018</span>
+                </div>
               </div>
+              <span class="title">
+                Boodschappen voor burrito's
+              </span>
+              <span class="amount">
+                &euro; 45,-
+              </span>
+
+            </div>
+
+            <span class="pass">
+              Boodschappen voor burrito's
+            </span>
+
+          </div>
+          <div class="entry-wrapper">
+
+            <div class="entry">
+
               <div class="member">
                 <img src="/static/images/person.jpg" alt="Person">
-                <span>Maarten Raap</span>
+                <div class="information">
+                  <span class="name">Fabian Geuzen</span>
+                  <span class="date">23-12-2018</span>
+                </div>
               </div>
+              <span class="title">
+                Boodschappen voor burrito's
+              </span>
+              <span class="amount">
+                &euro; 45,-
+              </span>
+
+            </div>
+
+            <span class="pass">
+              Boodschappen voor burrito's
+            </span>
+
+          </div>
+          <div class="entry-wrapper dark">
+
+            <div class="entry">
+
               <div class="member">
                 <img src="/static/images/person.jpg" alt="Person">
-                <span>Laurens Gentenaar</span>
+                <div class="information">
+                  <span class="name">Fabian Geuzen</span>
+                  <span class="date">23-12-2018</span>
+                </div>
               </div>
+              <span class="title">
+                Boodschappen voor burrito's
+              </span>
+              <span class="amount">
+                &euro; 45,-
+              </span>
 
             </div>
 
-        </section>
+            <span class="pass">
+              Boodschappen voor burrito's
+            </span>
 
-        <section class="payments">
+          </div>
+          <div class="entry-wrapper">
 
-          <div class="head">
-            <span class="details">Details</span>
-            <span class="description">Beschrijving</span>
-            <span class="cost">Kosten</span>
-          </div>
-          <div class="entry">
-            <div class="member">
-              <img src="/static/images/person.jpg" alt="Person">
-              <div class="information">
-                <span class="name">Fabian Geuzen</span>
-                <span class="date">23-12-2018</span>
+            <div class="entry">
+
+              <div class="member">
+                <img src="/static/images/person.jpg" alt="Person">
+                <div class="information">
+                  <span class="name">Fabian Geuzen</span>
+                  <span class="date">23-12-2018</span>
+                </div>
               </div>
+              <span class="title">
+                Boodschappen voor burrito's
+              </span>
+              <span class="amount">
+                &euro; 45,-
+              </span>
+
             </div>
-            <span class="title">
+
+            <span class="pass">
               Boodschappen voor burrito's
             </span>
-            <span class="amount">
-              &euro; 45,-
-            </span>
+
           </div>
-          <div class="entry dark">
-            <div class="member">
-              <img src="/static/images/person.jpg" alt="Person">
-              <div class="information">
-                <span class="name">Fabian Geuzen</span>
-                <span class="date">23-12-2018</span>
+          <div class="entry-wrapper dark">
+
+            <div class="entry">
+
+              <div class="member">
+                <img src="/static/images/person.jpg" alt="Person">
+                <div class="information">
+                  <span class="name">Fabian Geuzen</span>
+                  <span class="date">23-12-2018</span>
+                </div>
               </div>
+              <span class="title">
+                Boodschappen voor burrito's
+              </span>
+              <span class="amount">
+                &euro; 45,-
+              </span>
+
             </div>
-            <span class="title">
+
+            <span class="pass">
               Boodschappen voor burrito's
             </span>
-            <span class="amount">
-              &euro; 45,-
-            </span>
+
           </div>
-          <div class="entry">
-            <div class="member">
-              <img src="/static/images/person.jpg" alt="Person">
-              <div class="information">
-                <span class="name">Fabian Geuzen</span>
-                <span class="date">23-12-2018</span>
+          <div class="entry-wrapper">
+
+            <div class="entry">
+
+              <div class="member">
+                <img src="/static/images/person.jpg" alt="Person">
+                <div class="information">
+                  <span class="name">Fabian Geuzen</span>
+                  <span class="date">23-12-2018</span>
+                </div>
               </div>
+              <span class="title">
+                Boodschappen voor burrito's
+              </span>
+              <span class="amount">
+                &euro; 45,-
+              </span>
+
             </div>
-            <span class="title">
+
+            <span class="pass">
               Boodschappen voor burrito's
             </span>
-            <span class="amount">
-              &euro; 45,-
-            </span>
+
           </div>
-          <div class="entry dark">
-            <div class="member">
-              <img src="/static/images/person.jpg" alt="Person">
-              <div class="information">
-                <span class="name">Fabian Geuzen</span>
-                <span class="date">23-12-2018</span>
+          <div class="entry-wrapper dark">
+
+            <div class="entry">
+
+              <div class="member">
+                <img src="/static/images/person.jpg" alt="Person">
+                <div class="information">
+                  <span class="name">Fabian Geuzen</span>
+                  <span class="date">23-12-2018</span>
+                </div>
               </div>
+              <span class="title">
+                Boodschappen voor burrito's
+              </span>
+              <span class="amount">
+                &euro; 45,-
+              </span>
+
             </div>
-            <span class="title">
+
+            <span class="pass">
               Boodschappen voor burrito's
             </span>
-            <span class="amount">
-              &euro; 45,-
-            </span>
+
           </div>
-        </section>
+          <div class="entry-wrapper">
+
+            <div class="entry">
+
+              <div class="member">
+                <img src="/static/images/person.jpg" alt="Person">
+                <div class="information">
+                  <span class="name">Fabian Geuzen</span>
+                  <span class="date">23-12-2018</span>
+                </div>
+              </div>
+              <span class="title">
+                Boodschappen voor burrito's
+              </span>
+              <span class="amount">
+                &euro; 45,-
+              </span>
+
+            </div>
+
+            <span class="pass">
+              Boodschappen voor burrito's
+            </span>
+
+          </div>
+
+        </div>
+
+        <div class="bottom"></div>
 
         <div class="actions">
 
@@ -123,9 +290,11 @@
 
         </div>
 
+      </section>
+
     </div>
 
-    <div class="overlay">
+    <div class="overlay hide">
 
       <section class="addEntry">
 
@@ -138,7 +307,8 @@
 
             <input type="text" name="description">
             <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+              <path d="M3 18h6v-2H3v2zM3 6v2h18V6H3zm0 7h12v-2H3v2z"/>
+              <path d="M0 0h24v24H0z" fill="none"/>
             </svg>
 
           </div>
@@ -148,15 +318,16 @@
 
             <input type="text" name="amount">
             <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path d="M3 5v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2H5c-1.11 0-2 .9-2 2zm12 4c0 1.66-1.34 3-3 3s-3-1.34-3-3 1.34-3 3-3 3 1.34 3 3zm-9 8c0-2 4-3.1 6-3.1s6 1.1 6 3.1v1H6v-1z"/>
+              <path d="M15 18.5c-2.51 0-4.68-1.42-5.76-3.5H15v-2H8.58c-.05-.33-.08-.66-.08-1s.03-.67.08-1H15V9H9.24C10.32 6.92 12.5 5.5 15 5.5c1.61 0 3.09.59 4.23 1.57L21 5.3C19.41 3.87 17.3 3 15 3c-3.92 0-7.24 2.51-8.48 6H3v2h3.06c-.04.33-.06.66-.06 1 0 .34.02.67.06 1H3v2h3.52c1.24 3.49 4.56 6 8.48 6 2.31 0 4.41-.87 6-2.3l-1.78-1.77c-1.13.98-2.6 1.57-4.22 1.57z"/>
+              <path d="M0 0h24v24H0z" fill="none"/>
             </svg>
 
           </div>
 
-          <label for="password">Voor deze deelnemers</label>
+          <label for="participants">Voor deze deelnemers</label>
           <div class="input-wrapper">
 
-            <input type="password" name="password">
+            <input type="text" name="participants">
             <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
               <path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"/>
             </svg>
@@ -164,7 +335,7 @@
           </div>
           <div class="actions">
             <input class="button" type="submit" name="submit" value="Toevoegen">
-            <span>Annuleren</span>
+            <span class="cancelAdd">Annuleren</span>
           </div>
 
         </form>

@@ -1,31 +1,5 @@
 @import 'Modules/base.scss';
-
-img {
-  @include cirkel;
-  object-fit: cover;
-}
-
-.header {
-  width: 100%;
-  @include flex($justify-content: space-between, $align-items: center);
-
-  .user {
-    @include flex($align-items: center);
-
-    img {
-      @include cirkel;
-      @include container(40px);
-    }
-
-    span {
-      display: block;
-      margin-left: 20px;
-      font-size: 18px;
-    }
-
-  }
-
-}
+@import 'Modules/header.scss';
 
 .members {
   margin-top: 30px;
@@ -44,6 +18,8 @@ img {
 
     img {
       @include container(20px);
+      object-fit: cover;
+      @include cirkel;
     }
 
     span {
@@ -69,6 +45,10 @@ img {
 
   }
 
+}
+
+.pass {
+  display: none;
 }
 
 .payments {
@@ -106,9 +86,22 @@ img {
     background: #eee;
   }
 
+  .entries {
+    max-height: 400px;
+    overflow-y: scroll;
+  }
+
+  .bottom {
+    height: 8px;
+    background: $primary-color;
+    width: 100%;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+  }
+
   .entry {
     width: calc(100% - 40px);
-    padding: 20px 20px;
+    padding: 20px;
     @include flex($justify-content: space-between, $align-items: center);
 
     .member {
@@ -117,6 +110,8 @@ img {
 
       img {
         @include container(30px);
+        object-fit: cover;
+        @include cirkel;
       }
 
       .information {
@@ -158,20 +153,23 @@ img {
     }
   }
 
+  .pass {
+    display: block;
+    margin-top: 20px;
+  }
+
+  .entry-wrapper {
+    padding: 20px;
+    width: calc(100% - 40px);
+  }
+
   .entry {
     @include flex($justify-content: flex-start, $align-items: flex-start, $flex-wrap: wrap);
+    padding: 0px !important;
+    width: 100% !important;
 
-    .member {
-      order: 1;
-      width: 70%;
-    }
     .title {
-      order: 3;
-      width: 30%;
-    }
-    .amount {
-      order: 2;
-      width: 100%;
+      display: none;
     }
   }
 
@@ -184,7 +182,7 @@ img {
   }
 
   .calc {
-    background: #F79F1F;
+    background: $tertiary-color;
     margin-left: 10px;
   }
 
@@ -207,5 +205,15 @@ img {
   .addEntry {
     @include center;
     width: 600px;
+
+    .actions {
+      span {
+        margin-left: 20px;
+      }
+    }
+
+    @include media(900px) {
+      width: 70%;
+    }
   }
 }

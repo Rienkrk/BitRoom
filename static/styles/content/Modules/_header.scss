@@ -1,0 +1,31 @@
+.header-wrapper
+  {
+    width: calc(100% - 60px);
+    background: $primary-color;
+    padding: 30px;
+    color: white;
+  }
+
+.header {
+  @include center;
+  max-width: 1000px;
+  @include flex($justify-content: space-between, $align-items: center);
+
+  .user {
+    @include flex($align-items: center);
+
+    img {
+      @include cirkel;
+      object-fit: cover;
+      @include container(40px);
+    }
+
+    span {
+      display: block;
+      margin-left: 20px;
+      font-size: 18px;
+    }
+
+  }
+
+}
