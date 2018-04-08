@@ -14,6 +14,8 @@
 
     {{template "header"}}
 
+    <!-- {{.username}} -->
+
     <div class="wrapper">
 
       <section class="members">
@@ -286,7 +288,7 @@
         <div class="actions">
 
           <a class="add button" href="#">Betaling toevoegen</a>
-          <a class="calc button" href="#">Verekenen</a>
+          <a class="calc button" href="/settle">Verekenen</a>
 
         </div>
 
@@ -324,7 +326,7 @@
 
           </div>
 
-          <label for="participants">Voor deze deelnemers</label>
+          <label for="participants">Deelnemer</label>
           <div class="input-wrapper">
 
             <input type="text" name="participants">

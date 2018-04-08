@@ -92,7 +92,7 @@ a {
   padding: 40px 30px 0 30px; }
   @media only screen and (max-width: 700px) {
     .wrapper {
-      padding: 40px 20px 30px 20px; } }
+      padding: 30px 20px 30px 20px; } }
 
 .button {
   background: #8e44ad;
@@ -176,3 +176,7 @@ body {
   background-size: auto, cover;
   background-attachment: fixed, fixed;
   background-position: bottom, bottom; }
+
+.switch {
+  display: inline-block;
+  margin-top: 20px; }

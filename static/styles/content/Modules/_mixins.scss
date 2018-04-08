@@ -1,7 +1,9 @@
+// Mixins voor breakpoints
 @mixin media($width) {
   @media only screen and ( max-width: $width ) { @content; }
 }
 
+// Mixin voor flex boxxes
 @mixin flex($flex-direction: row, $flex-wrap: nowrap, $justify-content: flex-start, $align-items: flex-start, $align-content: flex-start) {
   display: -webkit-flex;
   display: -webkit-box;
@@ -30,6 +32,7 @@
 
 }
 
+// Mixin voor border radius
 @mixin border-radius($radius) {
   -webkit-border-radius: $radius;
      -moz-border-radius: $radius;
@@ -38,6 +41,7 @@
           border-radius: $radius;
 }
 
+// Mixin voor centreren
 @mixin center($block: true) {
 
   @if $block == true {
@@ -48,11 +52,13 @@
   margin-right: auto;
 }
 
+// Mixin voor containers
 @mixin container($width, $height: $width) {
   width: $width;
   height: $height;
 }
 
+// Mixin voor een cirkel
 @mixin cirkel() {
   -webkit-border-radius: 100%;
      -moz-border-radius: 100%;
@@ -61,6 +67,7 @@
           border-radius: 100%;
 }
 
+// Mixins voor animaties
 @mixin transition($kind: all, $time: 1s, $sort: ease, $delay: 0s) {
   -webkit-transition:$kind $time $sort $delay !important;
      -moz-transition:$kind $time $sort $delay !important;

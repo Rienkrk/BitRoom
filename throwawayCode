@@ -1,0 +1,64 @@
+session, _ := store.Get(r, "session")
+untyped, ok := session.Values["username"]
+if !ok {
+  return
+}
+username, ok := untyped.(string)
+if !ok {
+  return
+}
+w.Write([]byte(username))
+
+// Plaats de user in de sessions
+// session, _ := store.Get(r, "session")
+// session.Values["name"] = name
+// session.Save(r, w)
+
+// Maak een globale sessie aan
+// var store = sessions.NewCookieStore([]byte("secretkey"))
+
+// type User struct {
+// 	key string
+//
+// }
+//
+// func NewUser(Username string, Mail string, password string) {
+// 	id, err := client.Incr("user:next-id").Results()
+// 	if err != nil {
+// 		return nil, err
+// 	}
+// 	key := fmt.Sprintf("user%d", id)
+//
+// }
+
+client = redis.NewClient(&redis.Options) {
+  Addr: "localhost:6379",
+})
+
+// var client *redis.Client
+
+x := make(map[string][]string)
+
+x[participant] = append(x[participant], description)
+x[participant] = append(x[participant], amount)
+
+fmt.Println(description, amount, participant)
+
+// Parse de form
+r.ParseForm()
+
+
+// Haal data uit de form
+description := r.PostForm.Get("description")
+amount := r.PostForm.Get("amount")
+participant := r.PostForm.Get("participant")
+
+transaction := make(map[string][]string)
+
+transaction[participant] = append(transaction[participant], description)
+transaction[participant] = append(transaction[participant], amount)
+
+// all = make([]T, 0 )
+// all = append(all, transaction)
+
+// fmt.Println(reflect.TypeOf(transaction))
